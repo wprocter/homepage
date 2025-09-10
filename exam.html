@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exam Timer</title>
+  <link rel="stylesheet" href="includes/css/exam.css">
+</head>
+<body>
+    <div class="exam-container" id="exam-container">
+        <div class="left-panel">
+            <h1 id="exam-title"></h1>
+            <h3 id="display-center"></h3>
+        <div id="clock" class="clock">00:00:00</div>
+        <div id="date" class="date">Monday 4th Sept 2020</div>
+            <!-- Exam times on main panel -->
+            <p>Start Time: <span id="start-time"></span></p>
+            <p>Finish Time: <span id="finish-normal"></span></p>
+            <p id="row-25">Finish +25%: <span id="finish-25"></span></p>
+            <p id="row-50">Finish +50%: <span id="finish-50"></span></p>
+            <p>Time Left: <span id="time-left"></span></p>
+        </div>
+        <div class="right-panel">
+        <!-- Settings panel -->
+            <div class="settings-panel" id="settings-panel">
+         <div class="settings-header">
+           <span>Exam Settings</span>
+           <button id="toggle-settings">&#9699;</button>
+         </div>
+         <div class="settings-body" id="settings-body">
+            <div class="form-group">
+            <label for="exam-name">Exam Name:</label>
+            <input type="text" id="exam-name" placeholder="Enter exam name">
+            </div>
+            <div class="form-group">
+            <label for="center-number">Center Number:</label>
+            <input type="text" id="center-number" placeholder="Enter center number">
+            </div>
+            <div class="form-group">
+            <label for="length">Exam Length (minutes):</label>
+            <input type="number" id="length" min="1" value="60">
+            </div>
+            <div class="form-group">
+            <label><input type="checkbox" id="enable-25"> Enable +25% Time</label>
+            </div>
+            <div class="form-group">
+            <label><input type="checkbox" id="enable-50"> Enable +50% Time</label>
+            </div>
+            <button id="start-btn">Start Exam</button>
+        </div>  <!-- settings-body -->
+      </div>  <!-- settings-panel -->
+      <button id="toggle-panel">▶</button>
+    </div>  <!-- right-panel -->
+  </div>  <!-- exam-container -->
+<script src="includes/script/exam.js"></script>
+</body>
+</html>
