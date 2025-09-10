@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&display=swap');
+		.LogoName {font-family: 'Cabin Sketch', sans-serif;
+					font-weight: 700;}
+		.logocol {font-family: 'Cabin Sketch', sans-serif;
+				font-weight: 400;}
+		h4 {font-size:xx-large;
+			color: #ffffff;}
+
+.iconrow{
+    background-color:rgba(111,111,111,0.5);
+}
