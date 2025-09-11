@@ -23,15 +23,19 @@
           <hr />
           <div class="exam-body">
             <div class="col-left">
-              <div id="clock" class="clock">00:00:00</div>
+              <div id="clock" class="clock">00:00</div>
               <div id="date" class="date">Monday 4th Sept 2020</div>
             </div>
             <div class="col-right">
               <p>Start Time: <span id="start-time"></span></p>
-              <p>Finish Time: <span id="finish-normal"></span></p>
-              <p id="row-25">Finish +25%: <span id="finish-25"></span></p>
-              <p id="row-50">Finish +50%: <span id="finish-50"></span></p>
-              <p>Time Left: <span id="time-left"></span></p>
+              <p>Duration: <span id="duration"></span></p>
+              <p>Finish Time: <span id="finish-normal"></span> (<span id="time-left"></span>)</p>
+              <br/>
+              <br>
+              <p id="row-25">Finish <small>25% Extra Time</small>: <span id="finish-25"></span> (<span id="time-left-25" class="countdown"></span>)</p>
+              <br/>
+              <p id="row-50">Finish <small>50% Extra Time</small>: <span id="finish-50"></span> (<span id="time-left-50" class="countdown"></span>)</p>
+              
             </div>
           </div>
           

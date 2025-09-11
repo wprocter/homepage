@@ -88,11 +88,20 @@ body, html {
   margin-top: 0;
   padding: 0;
 }
-#time-left {
+#time-left, #time-left-25, #time-left-50 {
   font-weight: bold;
-  font-size: 2.5rem;
+  font-size: 2.0rem;
   color: #d00;
+  font-style: italic;
+  ;
 }
+#time-left, #time-left-25, #time-left-50::before {
+  content: " (";
+}
+#time-left, #time-left-25, #time-left-50::after {
+  content: " left)";
+}
+
 input[type="text"], input[type="number"], label  {
   padding: 0.2rem;
   font-size: 1rem;
@@ -252,10 +261,16 @@ input[type="checkbox"] {
 }
 .col-right p{
   font-size: 3rem;
+  line-height: 1.5rem;
   margin-left: 3rem;
 }
 hr {
   border: 0;
   border-top: 1px solid #444;
   margin: 1rem 0;
+}
+.countdown {
+  color: orange;
+  font-weight: bold;
+  margin-left: 0.5rem;
 }
