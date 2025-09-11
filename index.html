@@ -9,17 +9,18 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=League+Gothic&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="includes/css/style.css">
+    <link rel="stylesheet" href="includes/css/navigation.css">
     <title>Home</title>
     <meta name = "description" content = "Putting the Links you need, where you need them since 2022" />
-    <meta name = "revised" content = "WP V6 10/09/2025" />
+    <meta name = "revised" content = "WP V7 11/09/2025" />
     <meta name = "author" content = "Will Procter" />
     
     <style>
 		
     </style>
   </head>
-  <body class="bg-dark">
-    <div class="container mt-3 pb-3 rounded-1 vh-100">
+  <body class="bg-dark vh-100">
+    <div class="container mt-3 pb-3 rounded-1">
 
 		  
       <div class="row rounded py-3 px-3 mt-5 g-1 mb-3 iconrow" >
@@ -116,10 +117,24 @@
           
       </div>
 
+      <div class="nav-toggle" id="toggle-time"><i class="fa-solid fa-clock"></i></div>
+    <div class="nav-toggle" id="toggle-exam"><i class="fa-solid fa-file-alt"></i></div>
+
+    <!-- Overlays -->
+    <div class="overlay" id="time-overlay">
+      <button class="close-btn" id="close-time">Close</button>
+      <iframe src="time.html"></iframe>
+    </div>
+    <div class="overlay" id="exam-overlay">
+      <button class="close-btn" id="close-exam">Close</button>
+      <iframe src="exam.html"></iframe>
+    </div>
+
       <footer class="fixed-bottom text-center bg-success text-white">&copy; Copyright 2022 - Will Procter</footer>
   </div>
 
   <!-- Include random background script -->
   <script src="includes/script/random-bg.js"></script>
+  <script src="includes/script/navigation.js"></script>
 </body>
 </html>

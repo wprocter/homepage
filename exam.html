@@ -8,24 +8,43 @@
 </head>
 <body>
     <div class="exam-container" id="exam-container">
+      <!-- Pause overlay for pause state -->
+      <div id="pause-overlay">
+        <div class="pause-symbol">⏸</div>
+        <br/>
+        <h1>Please listen to the examiner for further instructions.</h1>
+
+      </div>
         <div class="left-panel">
+          <div class="exam-header">
             <h1 id="exam-title"></h1>
             <h3 id="display-center"></h3>
-        <div id="clock" class="clock">00:00:00</div>
-        <div id="date" class="date">Monday 4th Sept 2020</div>
-            <!-- Exam times on main panel -->
-            <p>Start Time: <span id="start-time"></span></p>
-            <p>Finish Time: <span id="finish-normal"></span></p>
-            <p id="row-25">Finish +25%: <span id="finish-25"></span></p>
-            <p id="row-50">Finish +50%: <span id="finish-50"></span></p>
-            <p>Time Left: <span id="time-left"></span></p>
-        </div>
+          </div>
+          <hr />
+          <div class="exam-body">
+            <div class="col-left">
+              <div id="clock" class="clock">00:00:00</div>
+              <div id="date" class="date">Monday 4th Sept 2020</div>
+            </div>
+            <div class="col-right">
+              <p>Start Time: <span id="start-time"></span></p>
+              <p>Finish Time: <span id="finish-normal"></span></p>
+              <p id="row-25">Finish +25%: <span id="finish-25"></span></p>
+              <p id="row-50">Finish +50%: <span id="finish-50"></span></p>
+              <p>Time Left: <span id="time-left"></span></p>
+            </div>
+          </div>
+          
+          
+          <!-- Start Exam play button -->
+          <button id="start-btn" class="start-exam start">Start</button>
+        </div>  <!-- left-panel -->
         <div class="right-panel">
         <!-- Settings panel -->
             <div class="settings-panel" id="settings-panel">
          <div class="settings-header">
            <span>Exam Settings</span>
-           <button id="toggle-settings">&#9699;</button>
+           <button id="toggle-settings"></button>
          </div>
          <div class="settings-body" id="settings-body">
             <div class="form-group">
@@ -40,16 +59,20 @@
             <label for="length">Exam Length (minutes):</label>
             <input type="number" id="length" min="1" value="60">
             </div>
+
+            <input type="checkbox" id="enable-25"> <label> Enable +25% Time</label><br/>
+            
+            <input type="checkbox" id="enable-50"><label> Enable +50% Time</label>
+            <!-- Expected start time input -->
             <div class="form-group">
-            <label><input type="checkbox" id="enable-25"> Enable +25% Time</label>
+              <label for="settings-start-time">Expected Start Time:</label>
+              <input type="time" id="settings-start-time">
             </div>
-            <div class="form-group">
-            <label><input type="checkbox" id="enable-50"> Enable +50% Time</label>
-            </div>
-            <button id="start-btn">Start Exam</button>
-        </div>  <!-- settings-body -->
+            <!-- Set button to save exam info -->
+            <button id="set-btn">Set Exam</button>
+          </div>  <!-- settings-body -->
       </div>  <!-- settings-panel -->
-      <button id="toggle-panel">▶</button>
+      <button id="toggle-panel">◀</button>
     </div>  <!-- right-panel -->
   </div>  <!-- exam-container -->
 <script src="includes/script/exam.js"></script>

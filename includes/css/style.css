@@ -9,3 +9,18 @@
 .iconrow{
     background-color:rgba(111,111,111,0.5);
 }
+
+/* Ensure background covers viewport without scrollbars */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
