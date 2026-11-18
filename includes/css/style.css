@@ -24,3 +24,29 @@ body {
   background-position: center center;
   background-repeat: no-repeat;
 }
+
+.apps-float {
+  position: fixed;
+  right: 1rem;
+  bottom: calc(3.25rem + env(safe-area-inset-bottom));
+  z-index: 1030;
+}
+
+.apps-float a {
+  display: block;
+  width: 3.5rem;
+  text-decoration: none;
+}
+
+.apps-float img {
+  display: block;
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 0.25rem 0.35rem rgba(0, 0, 0, 0.45));
+  transition: transform 0.15s ease;
+}
+
+.apps-float a:hover img,
+.apps-float a:focus-visible img {
+  transform: translateY(-0.125rem) scale(1.05);
+}
